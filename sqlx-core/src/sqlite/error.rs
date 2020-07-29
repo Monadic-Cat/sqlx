@@ -35,6 +35,9 @@ impl SqliteError {
             message: message.to_owned(),
         }
     }
+    pub fn sqlite_code(&self) -> c_int {
+        self.code
+    }
 }
 
 impl Display for SqliteError {
